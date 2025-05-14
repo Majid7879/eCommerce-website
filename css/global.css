@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonts  */
+@font-face {
+    font-family: 'poppins';
+    src:
+        url(/font/Poppins/Poppins-Bold.ttf),
+        url(/font/Poppins/Poppins-Medium.ttf),
+        url(/font/Poppins/Poppins-SemiBold.ttf),
+        url(/font/Poppins/Poppins-Regular.ttf);
+}
+
+/* varables */
+:root {
+    /* colors  */
+    --primary-color: #B88E2F;
+    --brown-300: #FFFA3E;
+    --brown-200: #FAF3EA;
+    --brown-100: #F9F1E7;
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --red: #E97171;
+    --green: #2EC1AC;
+    --yellow: #FFC700;
+
+    --grey: #616161;
+    --grey-dark: #242424;
+    --grey-light: #F4F5F7;
+
+    --grey-900: #333333;
+    --grey-800: #3A3A3A;
+    --grey-700: #666666;
+    --grey-600: #898989;
+    --grey-500: #9F9F9F;
+    --grey-400: #B0B0B0;
+    --grey-300: #D9D9D9;
+    --grey-200: #FCF8F3;
+
+    /* font sizes */
+    --fz-1: 0.75rem; /* 12px */
+    --fz-2: 0.875rem; /* 14px */
+    --fz-3: 1rem; /* 16px */
+    --fz-4: 1.125rem; /* 18px */
+    --fz-5: 1.25rem; /* 20px */
+    --fz-6: 1.5rem; /* 24px */
+    --fz-7: 1.75rem; /* 28px */
+    --fz-8: 2rem; /* 32px */
+    --fz-9: 2.25rem; /* 36px */
+    --fz-10: 2.5rem; /* 40px */
+    --fz-11: 2.75rem; /* 44px */
+    --fz-12: 3rem; /* 48px */
+    --fz-13: 3.25rem; /* 52px */
+    --fz-14: 4rem; /* 60px */
+    --fz-15: 4.25rem; /* 64px */
+   
+
+    /* font weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* spacing */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 28px;
+    --spacing-8: 32px;
+    --spacing-9: 36px;
+    --spacing-10: 40px;
+    --spacing-11: 44px;
+    --spacing-12: 48px;
+    --spacing-13: 52px;
+    --spacing-14: 56px;
+    --spacing-15: 60px;
+    --spacing-16: 64px;
+    --spacing-17: 68px;
+    --spacing-18: 72px;
+    --spacing-19: 76px;
+    --spacing-20: 80px;
+
+    --transition-effect: 0.5s ease-in-out;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'poppins';
+}
+
+a {
+    text-decoration: none;
+}
