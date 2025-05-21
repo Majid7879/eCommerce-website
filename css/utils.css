@@ -279,6 +279,27 @@
     font-size: var(--fs-15) !important;
 }
 
+/* font weight utilities */
+.fw-light {
+    font-weight: var(--fw-regular) !important;
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular) !important;
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium) !important;
+}
+
+.fw-semibold {
+    font-weight: var(--fw-semibold) !important;
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold) !important;
+}
+
 /* text color utilities */
 .text-primary {
     color: var(--primary-color) !important;

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro | preview </title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <!-- bootstarp -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel=" stylesheet" href="css/layout.css">
+    <link rel=" stylesheet" href="css/preview.css">
+</head>
+
+<body>
+    <!-- header  -->
+    <header class="navbar navbar-expand-lg ">
+        <div class="container-fluid justify-content-between row-gap-4">
+            <a href="#" class="logo navbar-brand col-3 col-lg-2 user-select-none"><img src="/images/logo.png" alt="logo"
+                    width="180" height="40" class="img-fluid"></a>
+            <div
+                class="links-icon nav order-lg-3 col-6 col-lg-4 col-xl-3 flex-nowrap justify-content-end gap-0 gap-md-3 gap-xxl-4">
+                <a href="#" class="nav-link text-body2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path
+                                d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                            <path fill="currentColor"
+                                d="M11 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10M8 7a3 3 0 1 1 6 0a3 3 0 0 1-6 0M4 18.5c0-.18.09-.489.413-.899c.316-.4.804-.828 1.451-1.222C7.157 15.589 8.977 15 11 15q.563 0 1.105.059a1 1 0 1 0 .211-1.99A13 13 0 0 0 11 13c-2.395 0-4.575.694-6.178 1.672c-.8.488-1.484 1.064-1.978 1.69C2.358 16.976 2 17.713 2 18.5c0 .845.411 1.511 1.003 1.986c.56.45 1.299.748 2.084.956C6.665 21.859 8.771 22 11 22l.685-.005a1 1 0 1 0-.027-2L11 20c-2.19 0-4.083-.143-5.4-.492c-.663-.175-1.096-.382-1.345-.582C4.037 18.751 4 18.622 4 18.5m12-.5a1 1 0 0 1 1-1h.99c.558 0 1.01.452 1.01 1.01v2.124A1 1 0 0 1 18.5 22h-.49A1.01 1.01 0 0 1 17 20.99V19a1 1 0 0 1-1-1m2-4a1 1 0 0 0-.117 1.993l.119.007a1 1 0 0 0 .117-1.993z" />
+                        </g>
+                    </svg></a>
+                <a href="#" class="nav-link text-body2"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24.5 24.5L19.2663 19.257M22.1666 12.25C22.1666 14.88 21.1219 17.4024 19.2621 19.2621C17.4024 21.1219 14.88 22.1666 12.25 22.1666C9.61992 22.1666 7.09757 21.1219 5.23784 19.2621C3.3781 17.4024 2.33331 14.88 2.33331 12.25C2.33331 9.61992 3.3781 7.09757 5.23784 5.23784C7.09757 3.3781 9.61992 2.33331 12.25 2.33331C14.88 2.33331 17.4024 3.3781 19.2621 5.23784C21.1219 7.09757 22.1666 9.61992 22.1666 12.25V12.25Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" />
+                    </svg></a>
+                <a href="#" class="nav-link text-body2"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.16668 3.5C4.94551 3.5 2.33334 6.08533 2.33334 9.275C2.33334 11.8498 3.35418 17.9608 13.4027 24.1383C13.5827 24.2479 13.7893 24.3058 14 24.3058C14.2107 24.3058 14.4173 24.2479 14.5973 24.1383C24.6458 17.9608 25.6667 11.8498 25.6667 9.275C25.6667 6.08533 23.0545 3.5 19.8333 3.5C16.6122 3.5 14 7 14 7C14 7 11.3878 3.5 8.16668 3.5Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></a>
+                <a class="nav-link text-body2" onclick="cart.open()"><svg width="28" height="28" viewBox="0 0 28 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.2355 19.1926H8.95234L9.76991 17.5273L23.3543 17.5027C23.8137 17.5027 24.2074 17.1746 24.2894 16.7207L26.1707 6.19062C26.2199 5.91445 26.1461 5.63008 25.9656 5.41406C25.8764 5.30775 25.7652 5.22211 25.6396 5.16309C25.514 5.10407 25.377 5.07308 25.2383 5.07227L7.95702 5.01484L7.80937 4.32031C7.7164 3.87734 7.31718 3.55469 6.86328 3.55469H2.63867C2.38267 3.55469 2.13716 3.65638 1.95614 3.8374C1.77513 4.01841 1.67343 4.26393 1.67343 4.51992C1.67343 4.77592 1.77513 5.02143 1.95614 5.20245C2.13716 5.38346 2.38267 5.48516 2.63867 5.48516H6.08124L6.72656 8.55312L8.31523 16.2449L6.26992 19.5836C6.1637 19.727 6.09972 19.8972 6.08523 20.075C6.07073 20.2528 6.10629 20.4312 6.18788 20.5898C6.35195 20.9152 6.68281 21.1203 7.04921 21.1203H8.7664C8.40032 21.6065 8.20258 22.1988 8.20312 22.8074C8.20312 24.3551 9.46093 25.6129 11.0086 25.6129C12.5562 25.6129 13.8141 24.3551 13.8141 22.8074C13.8141 22.1977 13.6117 21.6043 13.2508 21.1203H17.6559C17.2898 21.6065 17.092 22.1988 17.0926 22.8074C17.0926 24.3551 18.3504 25.6129 19.898 25.6129C21.4457 25.6129 22.7035 24.3551 22.7035 22.8074C22.7035 22.1977 22.5012 21.6043 22.1402 21.1203H25.2383C25.7687 21.1203 26.2035 20.6883 26.2035 20.1551C26.2019 19.8994 26.0993 19.6546 25.9179 19.4743C25.7366 19.294 25.4913 19.1927 25.2355 19.1926ZM8.35898 6.91797L24.1035 6.96992L22.5613 15.6051L10.1937 15.627L8.35898 6.91797ZM11.0086 23.6715C10.5328 23.6715 10.1445 23.2832 10.1445 22.8074C10.1445 22.3316 10.5328 21.9434 11.0086 21.9434C11.4844 21.9434 11.8726 22.3316 11.8726 22.8074C11.8726 23.0366 11.7816 23.2564 11.6196 23.4184C11.4575 23.5805 11.2378 23.6715 11.0086 23.6715ZM19.898 23.6715C19.4223 23.6715 19.034 23.2832 19.034 22.8074C19.034 22.3316 19.4223 21.9434 19.898 21.9434C20.3738 21.9434 20.7621 22.3316 20.7621 22.8074C20.7621 23.0366 20.6711 23.2564 20.509 23.4184C20.347 23.5805 20.1272 23.6715 19.898 23.6715Z"
+                            fill="black" />
+                    </svg></a>
+                <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <ul class="navbar-nav collapse navbar-collapse justify-content-center column-gap-4 column-gap-xl-5 col-12 col-lg-5"
+                id="menu">
+                <li class="nav-item"><a href="#" class="nav-link text-body2">Home </a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-body2">Shop</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-body2">About </a></li>
+                <li class="nav-item"><a href="# " class="nav-link text-body2">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- cart  -->
+    <nav class="cart-container">
+        <div class="cart d-flex flex-column justify-content-between">
+            <div class="cart-top d-flex justify-content-end">
+                <button class="cart-close" onclick="cart.close()">
+                    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.11047 9.6734C6.16563 9.6181 6.23115 9.57424 6.30328 9.5443C6.37542 9.51437 6.45275 9.49896 6.53085 9.49896C6.60894 9.49896 6.68628 9.51437 6.75841 9.5443C6.83055 9.57424 6.89607 9.6181 6.95122 9.6734L8.3121 11.0355L9.67297 9.6734C9.78446 9.56191 9.93568 9.49927 10.0933 9.49927C10.251 9.49927 10.4022 9.56191 10.5137 9.6734C10.6252 9.78489 10.6878 9.9361 10.6878 10.0938C10.6878 10.2514 10.6252 10.4027 10.5137 10.5141L9.15166 11.875L10.5137 13.2359C10.6252 13.3474 10.6878 13.4986 10.6878 13.6563C10.6878 13.8139 10.6252 13.9652 10.5137 14.0766C10.4022 14.1881 10.251 14.2508 10.0933 14.2508C9.93568 14.2508 9.78446 14.1881 9.67297 14.0766L8.3121 12.7146L6.95122 14.0766C6.83973 14.1881 6.68852 14.2508 6.53085 14.2508C6.37318 14.2508 6.22196 14.1881 6.11047 14.0766C5.99898 13.9652 5.93635 13.8139 5.93635 13.6563C5.93635 13.4986 5.99898 13.3474 6.11047 13.2359L7.47253 11.875L6.11047 10.5141C6.05518 10.459 6.01131 10.3935 5.98137 10.3213C5.95144 10.2492 5.93604 10.1719 5.93604 10.0938C5.93604 10.0157 5.95144 9.93834 5.98137 9.86621C6.01131 9.79407 6.05518 9.72855 6.11047 9.6734Z"
+                            fill="#9F9F9F" />
+                        <path
+                            d="M8.3125 1.1875C9.09986 1.1875 9.85497 1.50028 10.4117 2.05703C10.9685 2.61378 11.2812 3.36889 11.2812 4.15625V4.75H5.34375V4.15625C5.34375 3.36889 5.65653 2.61378 6.21328 2.05703C6.77003 1.50028 7.52514 1.1875 8.3125 1.1875ZM12.4688 4.75V4.15625C12.4688 3.05394 12.0309 1.99679 11.2514 1.21734C10.472 0.437889 9.41481 0 8.3125 0C7.21019 0 6.15304 0.437889 5.37359 1.21734C4.59414 1.99679 4.15625 3.05394 4.15625 4.15625V4.75H0V16.625C0 17.2549 0.250223 17.859 0.695621 18.3044C1.14102 18.7498 1.74511 19 2.375 19H14.25C14.8799 19 15.484 18.7498 15.9294 18.3044C16.3748 17.859 16.625 17.2549 16.625 16.625V4.75H12.4688ZM1.1875 5.9375H15.4375V16.625C15.4375 16.9399 15.3124 17.242 15.0897 17.4647C14.867 17.6874 14.5649 17.8125 14.25 17.8125H2.375C2.06006 17.8125 1.75801 17.6874 1.53531 17.4647C1.31261 17.242 1.1875 16.9399 1.1875 16.625V5.9375Z"
+                            fill="#9F9F9F" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="item-list flex-grow-1 p-l-7 p-t-10 p-r-10  overflow-x-hidden overflow-y-auto">
+                <li class="item d-flex align-items-center m-b-4">
+                    <div class="img"><img src="/images/cart/1.png" alt=""></div>
+                    <div class="text m-l-8 m-r-13">
+                        <p class="item-name text-body3 text-black m-b-1">Asgaard sofa</p>
+                        <div>
+                            <span class="item-quantity fs-3 fw-light text-black">1</span>
+                            <span class="fs-1 fw-light text-black p-l-4 p-r-4 ">X</span>
+                            <span class="item-price fs-1 fw-medium text-primary">Rs. 250,000.00</span>
+                        </div>
+                    </div>
+                    <button class="delete-item"><i class="fa-solid fa-circle-xmark fa-lg text-grey-500"></i></button>
+                </li>
+                <li class="item d-flex align-items-center m-b-4">
+                    <div class="img"><img src="/images/cart/2.jpg" alt=""></div>
+                    <div class="text m-l-8 m-r-13">
+                        <p class="item-name text-body3 text-black m-b-1">Asgaard sofa</p>
+                        <div>
+                            <span class="item-quantity fs-3 fw-light text-black">1</span>
+                            <span class="fs-1 fw-light text-black p-l-4 p-r-4 ">X</span>
+                            <span class="item-price fs-1 fw-medium text-primary">Rs. 250,000.00</span>
+                        </div>
+                    </div>
+                    <button class="delete-item"><i class="fa-solid fa-circle-xmark fa-lg text-grey-500"></i></button>
+                </li>
+            </ul>
+            <div class="cart-bottom">
+                <div class="subtotal d-flex justify-content-between flex-nowrap">
+                    <p class="text-body3 text-black">Subtotal</p>
+                    <p class="fs-3 fw-semibold text-primary">Rs. 520,000.00</p>
+                </div>
+                <div class="btns d-flex p-7 p-t-7 p-b-7 justify-content-center flex-wrap gap-1">
+                    <button
+                        class="btn btn-outline-dark rounded-pill flex-grow-1 fs-1 fw-regular p-t-1 p-b-1 p-l-6 p-r-6">Cart</button>
+                    <button
+                        class="btn btn-outline-dark rounded-pill flex-grow-1 fs-1 fw-regular p-t-1 p-b-1 p-l-6 p-r-6">Checkout</button>
+                    <button
+                        class="btn btn-outline-dark rounded-pill flex-grow-1 fs-1 fw-regular p-t-1 p-b-1 p-l-6 p-r-6">Comparison</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main  -->
+    <main>
+        <nav class="align-container bg-brown-100 p-t-6 p-b-6">
+            <div class="container-fluid">
+                <ul class="breadcrumb mb-0" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-body3">Home</a> </li>
+                    <li class="breadcrumb-item"><a href="shop.html" class="text-body3">Shop</a> </li>
+                    <li class="breadcrumb-item "><a href="#" class="text-body3 text-black p-l-7 p-t-2 p-b-2"
+                            style="border-left: 2px solid var(--grey-500)">Asgaard sofa</a> </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+        <!-- product-preview  -->
+        <section class="product-preview align-container m-t-8 m-b-14 d-flex justify-content-center">
+            <div class="container-fluid row  p-0 r">
+                <div class="images-preview col-12 col-lg-6 row flex-column flex-sm-row p-0">
+                    <div class="swiper thumbs col-12 col-sm-2 ">
+                        <div class="swiper-wrapper flex-row flex-sm-column">
+                            <div class="swiper-slide">
+                                <img src="/images/preview/1.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/preview/2.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/preview/3.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/preview/4.png" alt="preview1" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper images col">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide p-b-5 p-t-10">
+                                <img src="/images/preview/1.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide p-b-5 p-t-10">
+                                <img src="/images/preview/2.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide p-b-5 p-t-10">
+                                <img src="/images/preview/3.png" alt="preview1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide p-b-5 p-t-10">
+                                <img src="/images/preview/4.png" alt="preview1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="content col-12 col-lg-5 p-0">
+                    <h3 class="price fs-6 fw-medium text-grey-500 m-b-4">
+                        RP 250,000.000
+                    </h3>
+                    <div class="rate d-flex m-b-4">
+                        <div class="starts m-r-4 d-flex flex-nowrap">
+                            <span><i class="fa-solid fa-star text-yellow fs-5 m-r-2"></i></span>
+                            <span><i class="fa-solid fa-star text-yellow fs-5 m-r-2"></i></span>
+                            <span><i class="fa-solid fa-star text-yellow fs-5 m-r-2"></i></span>
+                            <span><i class="fa-solid fa-star text-yellow fs-5 m-r-2"></i></span>
+                            <span><i class="fa-solid fa-star-half text-yellow fs-5"></i></span>
+                        </div>
+                        <p class="reviewer text-body3 fs-2 p-l-6 ">5 Customer Review</p>
+                    </div>
+                    <p class="description fs-2 fw-regular text-black m-b-6 text-justify">
+                        Setting the bar as one of the loudest speakers in its class,
+                        the Kilburn is a compact, stout-hearted hero with a well-balanced
+                        audio which boasts a clear midrange and extended highsfor a sound.
+                    </p>
+                    <div class="sizes m-b-4">
+                        <p class="text-body3 fs-2 m-b-1">Size</p>
+                        <div class="sizes-list d-flex flex-nowrap">
+                            <div class="opation m-r-4">
+                                <input type="radio" checked class="btn-check" name="size" id="size-l">
+                                <label for="size-l" class="btn fs-2 fw-regular text-black bg-brown-100">L</label>
+                            </div>
+                            <div class="opation m-r-4">
+                                <input type="radio" class="btn-check" name="size" id="size-xl">
+                                <label for="size-xl" class="btn fs-2 fw-regular text-black bg-brown-100">XL</label>
+                            </div>
+                            <div class="opation">
+                                <input type="radio" class="btn-check" name="size" id="size-xs">
+                                <label for="size-xs" class="btn fs-2 fw-regular text-black bg-brown-100">XS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colors m-b-8">
+                        <p class="text-body3 fs-2 m-b-1">color</p>
+                        <div class="colors-list d-flex flex-nowrap">
+                            <div class="opation m-r-4">
+                                <input type="radio" checked class="btn-check" name="color" id="color-1">
+                                <label for="color-1" class="btn fs-2 fw-regular text-black"
+                                    style="--color: #816DFA;"></label>
+                            </div>
+                            <div class=" opation m-r-4">
+                                <input type="radio" class="btn-check" name="color" id="color-2">
+                                <label for="color-2" class="btn fs-2 fw-regular text-black"
+                                    style="--color: #000000;"></label>
+                            </div>
+                            <div class="opation">
+                                <input type="radio" class="btn-check" name="color" id="color-3">
+                                <label for="color-3" class="btn fs-2 fw-regular text-black"
+                                    style="--color: #B88E2F;"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control d-flex flex-wrap m-b-15">
+                        <div class="quantity d-flex flex-nowrap">
+                            <button class="" onclick="quantity.decrement()"><i
+                                    class="fa-solid fa-minus fa-2xs"></i></button>
+                            <input type="number" class="" value="100" min="1" max="100">
+                            <button class="" onclick="quantity.increment()"><i
+                                    class="fa-solid fa-plus fa-2xs"></i></button>
+                        </div>
+                        <button id="add-to-cart" class="btn btn-outline-dark text-body1 p-t-4 p-b-4 p-l-12 p-r-12">Add
+                            To Cart</button>
+                        <button id="compare" class="btn btn-outline-dark text-body1 p-t-4 p-b-4 p-l-12 p-r-12"><i
+                                class="fa-solid fa-plus fa-2xs m-r-3"></i>Compare</button>
+                    </div>
+                    <div class="info border-top p-t-10 p-b-8">
+                        <div class="row">
+                            <p class="col-3 text-body3">SKU</p>
+                            <p class="col text-body3"><span class="m-r-3">:</span>SS001</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-3 text-body3">Category</p>
+                            <p class="col text-body3"><span class="m-r-3">:</span>Sofas</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-3 text-body3">Tags</p>
+                            <p class="col text-body3"><span class="m-r-3">:</span>Sofa, Chair, Home, Shop</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-3 text-body3">Share</p>
+                            <p class="col text-body3">
+                                <span class="m-r-3">:</span>
+                                <a href="#" class="m-r-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                                        height="20">
+                                        <path
+                                            d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                                    </svg></a>
+
+                                <a href="#" class="m-r-6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                        width="20" height="20">
+                                        <path
+                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                    </svg></a>
+
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                                        height="20">
+                                        <path
+                                            d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                                    </svg></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- product-details -->
+        <section class="product-details align-container m-b-14">
+            <div class="container-fluid">
+                <div class="header nav justify-content-center m-b-9">
+                    <button class="nav-item text-body3 fs-6 active">Description</button>
+                    <button class="nav-item text-body3 fs-6">Additional Information</button>
+                    <button class="nav-item text-body3 fs-6">Reviews [5]</button>
+                </div>
+                <div class="description">
+                    <p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker
+                        takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the
+                        road.</p>
+                    <p>Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering.
+                        Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+                        stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs
+                        for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune
+                        the controls to your personal preferences while the guitar-influenced leather strap enables easy
+                        and stylish travel.</p>
+                    <div class="images row gap-3 justify-content-center m-t-9">
+                        <div class="col-12 col-sm-5 bg-brown-100"><img class="img-fluid"
+                                src="/images/preview/description1.png" alt="img">
+                        </div>
+                        <div class="col-12 col-sm-5 bg-brown-100"><img class="img-fluid"
+                                src="/images/preview/description2.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- related-products  -->
+        <section class="related-products align-container m-b-16">
+            <div class="container-fluid">
+                <div class="header m-b-6">
+                    <h2 class="fs-9 fw-medium text-black  text-center">Related&nbsp;Products</h2>
+                </div>
+                <div class="products-list swiper ">
+                    <div class="swiper-wrapper ">
+                        <div class="product card swiper-slide">
+                            <p class="discount text-body2" style="--color: var(--red)">-30%</p>
+                            <img src="/images/products/1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title text-head4">Syltherine</h4>
+                                <p class="card-text text-body2 text-grey-600">Stylish cafe chair</p>
+                                <div class="price">
+                                    <span class="text-head4 fs-5">Rp 2.500.000</span>
+                                    <span class="text-body3 text-grey-400 m-l-2">Rp 3.500.000</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button
+                                    class="btn bg-white text-primary fw-semibold p-t-3 p-b-3 p-l-13 p-r-13 rounded-0">Add
+                                    to
+                                    cart</button>
+                                <div class="m-t-6">
+                                    <a href="" class="fs-3 fw-semibold text-white"><i
+                                            class="fa-solid fa-share-nodes"></i>
+                                        Share</a>
+                                    <a href="" class="fs-3 fw-semibold text-white m-l-5 m-r-5"><i
+                                            class="fa-solid fa-right-left"></i> Compare</a>
+                                    <a href="" class="fs-3 fw-semibold text-white"><i class="fa-regular fa-heart"></i>
+                                        Like</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product card swiper-slide">
+                            <p class="discount text-body2" style="--color: var(--red)">-30%</p>
+                            <img src="/images/products/1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title text-head4">Syltherine</h4>
+                                <p class="card-text text-body2 text-grey-600">Stylish cafe chair</p>
+                                <div class="price">
+                                    <span class="text-head4 fs-5">Rp 2.500.000</span>
+                                    <span class="text-body3 text-grey-400 m-l-2">Rp 3.500.000</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button
+                                    class="btn bg-white text-primary fw-semibold p-t-3 p-b-3 p-l-13 p-r-13 rounded-0">Add
+                                    to
+                                    cart</button>
+                                <div class="m-t-6">
+                                    <a href="" class="fs-3 fw-semibold text-white"><i
+                                            class="fa-solid fa-share-nodes"></i>
+                                        Share</a>
+                                    <a href="" class="fs-3 fw-semibold text-white m-l-5 m-r-5"><i
+                                            class="fa-solid fa-right-left"></i> Compare</a>
+                                    <a href="" class="fs-3 fw-semibold text-white"><i class="fa-regular fa-heart"></i>
+                                        Like</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product card swiper-slide">
+                            <p class="discount text-body2" style="--color: var(--red)">-30%</p>
+                            <img src="/images/products/1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title text-head4">Syltherine</h4>
+                                <p class="card-text text-body2 text-grey-600">Stylish cafe chair</p>
+                                <div class="price">
+                                    <span class="text-head4 fs-5">Rp 2.500.000</span>
+                                    <span class="text-body3 text-grey-400 m-l-2">Rp 3.500.000</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button
+                                    class="btn bg-white text-primary fw-semibold p-t-3 p-b-3 p-l-13 p-r-13 rounded-0">Add
+                                    to
+                                    cart</button>
+                                <div class="m-t-6">
+                                    <a href="" class="fs-3 fw-semibold text-white"><i
+                                            class="fa-solid fa-share-nodes"></i>
+                                        Share</a>
+                                    <a href="" class="fs-3 fw-semibold text-white m-l-5 m-r-5"><i
+                                            class="fa-solid fa-right-left"></i> Compare</a>
+                                    <a href="" class="fs-3 fw-semibold text-white"><i class="fa-regular fa-heart"></i>
+                                        Like</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product card swiper-slide">
+                            <p class="discount text-body2" style="--color: var(--red)">-30%</p>
+                            <img src="/images/products/1.jpg" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title text-head4">Syltherine</h4>
+                                <p class="card-text text-body2 text-grey-600">Stylish cafe chair</p>
+                                <div class="price">
+                                    <span class="text-head4 fs-5">Rp 2.500.000</span>
+                                    <span class="text-body3 text-grey-400 m-l-2">Rp 3.500.000</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <button
+                                    class="btn bg-white text-primary fw-semibold p-t-3 p-b-3 p-l-13 p-r-13 rounded-0">Add
+                                    to
+                                    cart</button>
+                                <div class="m-t-6">
+                                    <a href="" class="fs-3 fw-semibold text-white"><i
+                                            class="fa-solid fa-share-nodes"></i>
+                                        Share</a>
+                                    <a href="" class="fs-3 fw-semibold text-white m-l-5 m-r-5"><i
+                                            class="fa-solid fa-right-left"></i> Compare</a>
+                                    <a href="" class="fs-3 fw-semibold text-white"><i class="fa-regular fa-heart"></i>
+                                        Like</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next btn-next"></div>
+                    <div class="swiper-button-prev btn-prev"></div>
+                </div>
+            </div>
+            <div class="footer w-100 text-center m-t-8">
+                <button class="btn btn-outline-primary fw-semibold p-t-3 p-b-3 p-l-19 p-r-19">Show More</button>
+            </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer  -->
+    <footer class="align-container p-t-12 p-b-9 border-top">
+        <div class="container-fluid ">
+            <div class="footer-top row justify-content-between
+            gap-5">
+                <div class="info col-12 col-md-6 col-xl-3">
+                    <h4 class="fs-6 fw-bold text-black m-b-13">Funiro.</h4>
+                    <p class="text-body3">400 University Drive Suite 200 Coral Gables,
+                        FL 33134 USA</p>
+
+                </div>
+                <div class="footer-links col-12 col-xl-8 row justify-content-md-between flex-wrap-reverse">
+                    <div class="col-12 col-md-3 d-flex flex-column">
+                        <p class="links-header text-body2 text-grey-500 m-b-7">Links</p>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Home</a>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Shop</a>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">About</a>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Contact</a>
+                    </div>
+                    <div class="col-12 col-md-3 d-flex flex-column">
+                        <p class="links-header text-body2 text-grey-500 m-b-7">Help</p>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Payment Options</a>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Returns</a>
+                        <a href="#" class="footer-links text-body2 m-b-11 effect hover-opacity">Privacy Policies</a>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex flex-column">
+                        <p class="links-header text-body2 text-grey-500 m-b-7">Newsletter</p>
+                        <form action="" class="input-group footer-form flex-nowrap m-b-14">
+                            <input type="email" class="text-body3 fs-2" placeholder="Enter Your Email Address">
+                            <button class="btn text-body2 fs-2 input-group-text effect hover-opacity" type="submit"
+                                id="button-addon2">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom m-t-12 border-top">
+                <p class="copyright text-body3 text-black m-t-9">
+                    © 2023 Funiro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- bootstarp -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    <script src=" /bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <!-- swiper  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/spwiper.js"></script>
+    <!-- javescript file -->
+    <script src="/js/main.js"></script>
+    <script src="/js/preview.js"></script>
+    <script>
+        var swiper = new Swiper(".images-preview .thumbs", {
+            spaceBetween: 10,
+            slidesPerView: 'auto',
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".images-preview .images", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+
+        var swiper2 = new Swiper(".products-list", {
+            spaceBetween: 32,
+            navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev"
+            },
+            slidesPerView: "auto"
+        });
+    </script>
+</body>
+
+</html>

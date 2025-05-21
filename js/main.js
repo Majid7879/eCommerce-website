@@ -83,3 +83,22 @@ getProductsData('/js/products.json')
     .catch(error => {
         console.error('Error fetching products:', error);
     });
+
+
+// Cart
+var createCart = (selector = '') => {
+    var el = document.querySelector(selector);
+    console.log(el)
+    var open = () => {
+        if (el !== null) {
+            el.classList.add('show');
+        }
+    }
+    var close = () => {
+        if (el !== null) {
+            el.classList.remove('show');
+        }
+    }
+    return { open, close }
+}
+let cart = createCart('nav.cart-container');

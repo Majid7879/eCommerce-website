@@ -69,6 +69,125 @@ header .container-fluid .links-icon a:active {
 }
 
 /* end header  */
+/* start cart  */
+nav.cart-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+}
+
+nav.cart-container.show {
+    display: block;
+}
+
+nav.cart-container .cart {
+    width: min(100%, 417px);
+    height: 746px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFFFFF;
+}
+
+nav.cart-container .cart .cart-top {
+    padding: 28px 40px 36px 28px;
+    position: relative;
+}
+
+nav.cart-container .cart .cart-top::after {
+    content: '';
+    width: 287px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    background-color: var(--grey-300);
+}
+
+nav.cart-container .cart .cart-top .cart-close {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    transition: var(--transition-effect);
+}
+
+nav.cart-container .cart .cart-top .cart-close svg path {
+    transition: var(--transition-effect);
+}
+
+nav.cart-container .cart .cart-top .cart-close:hover svg path {
+    fill: var(--black);
+}
+
+nav.cart-container .cart .item-list .item {
+    list-style: none;
+}
+
+nav.cart-container .cart .item-list .item .img {
+    width: 100px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background-color: var(--brown-100);
+    border-radius: 10px;
+}
+
+nav.cart-container .cart .item-list .item .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav.cart-container .cart .item-list .item .text>* {
+    white-space: nowrap;
+
+}
+
+
+
+nav.cart-container .cart .item-list .delete-item {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+}
+
+nav.cart-container .cart .item-list .delete-item:hover i,
+nav.cart-container .cart .item-list .delete-item:active i {
+    color: var(--red) !important;
+    transition: var(--transition-effect);
+}
+
+nav.cart-container .cart .cart-bottom .subtotal {
+    padding: 24px 24% 24px 30px;
+    border-bottom: 1px solid var(--grey-300);
+}
+
+@media (max-width: 567px) {
+    nav.cart-container .cart .item-list .item .text {
+        margin-inline: 16px 28px !important;
+    }
+
+    /* 
+    nav.cart-container .cart .cart-bottom .subtotal {
+        padding-right: 40px;
+    } */
+
+}
+
+
+
+/* end cart  */
 /* start main  */
 /* start hero section  */
 .hero {

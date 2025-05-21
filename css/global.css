@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 
 /* fonts  */
 @font-face {
-    font-family: 'poppins';
-    src:
-        url(/font/Poppins/Poppins-Bold.ttf),
+    font-family: 'poppdins';
+    src: url(/font/Poppins/Poppins-Bold.ttf),
         url(/font/Poppins/Poppins-Medium.ttf),
         url(/font/Poppins/Poppins-SemiBold.ttf),
-        url(/font/Poppins/Poppins-Regular.ttf);
+        url(/font/Poppins/Poppins-Regular.ttf),
+        url(/font/Poppins/Poppins-Light.ttf);
 }
 
 /* varables */
@@ -43,22 +46,37 @@
     --grey-200: #FCF8F3;
 
     /* font sizes */
-    --fz-1: 0.75rem; /* 12px */
-    --fz-2: 0.875rem; /* 14px */
-    --fz-3: 1rem; /* 16px */
-    --fz-4: 1.125rem; /* 18px */
-    --fz-5: 1.25rem; /* 20px */
-    --fz-6: 1.5rem; /* 24px */
-    --fz-7: 1.75rem; /* 28px */
-    --fz-8: 2rem; /* 32px */
-    --fz-9: 2.25rem; /* 36px */
-    --fz-10: 2.5rem; /* 40px */
-    --fz-11: 2.75rem; /* 44px */
-    --fz-12: 3rem; /* 48px */
-    --fz-13: 3.25rem; /* 52px */
-    --fz-14: 4rem; /* 60px */
-    --fz-15: 4.25rem; /* 64px */
-   
+    --fz-1: 0.75rem;
+    /* 12px */
+    --fz-2: 0.875rem;
+    /* 14px */
+    --fz-3: 1rem;
+    /* 16px */
+    --fz-4: 1.125rem;
+    /* 18px */
+    --fz-5: 1.25rem;
+    /* 20px */
+    --fz-6: 1.5rem;
+    /* 24px */
+    --fz-7: 1.75rem;
+    /* 28px */
+    --fz-8: 2rem;
+    /* 32px */
+    --fz-9: 2.25rem;
+    /* 36px */
+    --fz-10: 2.5rem;
+    /* 40px */
+    --fz-11: 2.75rem;
+    /* 44px */
+    --fz-12: 3rem;
+    /* 48px */
+    --fz-13: 3.25rem;
+    /* 52px */
+    --fz-14: 4rem;
+    /* 60px */
+    --fz-15: 4.25rem;
+    /* 64px */
+
 
     /* font weights */
     --fw-regular: 400;
@@ -94,7 +112,7 @@
 body {
     width: 100%;
     min-height: 100vh;
-    font-family: 'poppins';
+    position: relative;
 }
 
 a {
